@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun Rahma!!! 🎉</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Music Control -->
+    <button class="music-control" onclick="toggleMusic()" id="musicBtn">🎵</button>
+    <audio id="bgMusic" loop>
+        <source src="/sound-hb.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Page 1: Welcome -->
+    <div class="page active" id="page1">
+        <div class="welcome-icon">🎂</div>
+        <div class="welcome">
+            <h1>Happy Birthday Rahmaaa!!!</h1>
+            <p class="welcome-message">
+                Semoga di hari yang spesial ini membawa kebahagiaan<br>
+                dan momen-momen indah yang tak terlupakan
+            </p>
+            <button class="start-btn" onclick="goToPage(2)">Mulai Perayaan 🎉</button>
+            <p>(Klik icon bulat di bawah ini <br> secara urut ya buat lanjut😁)</p>
+        </div>
+    </div>
+
+    <!-- Page 2: Birthday Cake -->
+    <div class="page" id="page2">
+        <h2 style="color: #1e3a8a; margin-bottom: 1rem;">Tiup Lilinnya 🕯️</h2>
+        <div class="cake-container">
+            <div class="cake">🎂</div>
+        </div>
+        <p class="blow-instruction">Klik setiap lilin untuk meniupnya. <br />Jangan lupa make a wish nya yaa</p>
+        <div class="candles">
+            <span class="candle" onclick="blowCandle(this)">🕯️</span>
+            <span class="candle" onclick="blowCandle(this)">🕯️</span>
+            <span class="candle" onclick="blowCandle(this)">🕯️</span>
+            <span class="candle" onclick="blowCandle(this)">🕯️</span>
+            <span class="candle" onclick="blowCandle(this)">🕯️</span>
+        </div>
+        <div id="cake-message" style="margin-top: 2rem; color: #1e40af; font-size: 1.2rem;"></div>
+    </div>
+
+    <!-- Page 3: Birthday Wishes -->
+    <div class="page" id="page3">
+        <div class="wish-icon">⭐</div>
+        <h2 style="color: #1e3a8a; margin-bottom: 2rem;">Doa & Harapan Terbaik</h2>
+        <div class="wish-card">
+            Semoga di umur yang baru ini kamu diberikan kesehatan, kebahagiaan yang berlimpah, dan kesuksesan
+            dalam setiap
+            langkah yang kamu ambil.
+        </div>
+        <div class="wish-card" style="animation-delay: 0.3s;">
+            Dan semoga kamu selalu dikelilingi oleh orang-orang yang mencintai dan mendukungmu, serta menemukan
+            kebahagiaan
+            dalam hal-hal kecil di setiap hari nyaaa.
+        </div>
+    </div>
+
+    <!-- Page 4: Photo Gallery -->
+    <div class="page" id="page4">
+        <h2 style="color: #1e3a8a; margin-bottom: 2rem;">Galeri Momen Indah 📸</h2>
+        <p style="color: #1e40af; margin-bottom: 2rem;">Klik foto untuk melihat ucapan spesial 😊</p>
+        <div class="gallery">
+            <div class="photo-frame" onclick="showPhoto(this)">
+                <img src="./foto1-1x1.jpg" alt="Foto Ultah">
+            </div>
+            <div class="photo-frame" onclick="showPhoto(this)">
+                <img src="./foto2-1x1.jpg" alt="Foto Ultah">
+            </div>
+            <div class="photo-frame" onclick="showPhoto(this)">
+                <img src="./foto3-1x1.jpg" alt="Foto Ultah">
+            </div>
+            <div class="photo-frame" onclick="showPhoto(this)">
+                <img src="./foto4-1x1.jpg" alt="Foto Ultah">
+            </div>
+            <div class="photo-frame" onclick="showPhoto(this)">
+                <img src="./foto5-1x1.jpg" alt="Foto Ultah">
+            </div>
+            <div class="photo-frame" onclick="showPhoto(this)">
+                <img src="./foto6-1x1.jpg" alt="Foto Ultah">
+            </div>
+        </div>
+        <div id="photo-caption" style="margin-top: 2rem; color: #1e40af; font-size: 1.1rem; min-height: 80px;"></div>
+    </div>
+
+    <!-- Page 5: Interactive Messages -->
+    <div class="page" id="page5">
+        <h2 style="color: #1e3a8a; margin-bottom: 2rem;">Pesan Spesial 🎁</h2>
+        <p style="color: #1e40af; margin-bottom: 1rem;">Klik untuk membuka pesan <br> yang ini bener dah ucapan ✌️</p>
+        <div class="surprise-box" onclick="getSurprise()">🎁</div>
+        <div class="surprise-message" id="surprise-text"></div>
+    </div>
+
+    <!-- Page 6: Final Message -->
+    <div class="page" id="page6">
+        <div class="final-heart">💙</div>
+        <h2 style="color: #1e3a8a; margin-bottom: 2rem;">Selamat Ulang Tahun <br> <em>Rahma Diah Azzahra!!!</em></h2>
+        <div class="final-message">
+            Terima kasih telah menjadi pribadi yang menginspirasi dan membawa kebahagiaan bagi orang-orang di
+            sekitarmu.<br><br>
+            Semoga tahun ini menjadi tahun yang penuh berkah, pencapaian, dan kebahagiaan yang hakiki.
+        </div>
+        <div class="signature">
+            Dengan doa dan harapan terbaik<br>
+            <em>Happy Birthday! 🎉</em>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-btn active" onclick="goToPage(1)">🏠</button>
+        <button class="nav-btn" onclick="goToPage(2)">🎂</button>
+        <button class="nav-btn" onclick="goToPage(3)">⭐</button>
+        <button class="nav-btn" onclick="goToPage(4)">📸</button>
+        <button class="nav-btn" onclick="goToPage(5)">🎁</button>
+        <button class="nav-btn" onclick="goToPage(6)">💙</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
