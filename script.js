@@ -15,12 +15,10 @@ const surprises = [
 ];
 
 const photoCaptions = [
-    "Gak tau kek orang ngantuk 📸",
-    "Good smile 🌸",
-    "Good smile again 🎈",
-    "Entahlah kayak donat gula 🌺",
-    "Senyum kayak iklan Pepsodent 🎁",
-    "Keliatan kayak orang kecolok ✨"
+    "Putri Duyung nyasar ini mah 🧜‍♀ ",
+    "Good smile with jempol andalan 👍",
+    "Calon BA G2G kayaknya ini 😍",
+    "Orang masuk angin ini mah 🤧",
 ];
 
 // Initialize music
@@ -106,7 +104,7 @@ function createFloatingHearts() {
         setTimeout(() => {
             const heart = document.createElement('div');
             heart.className = 'floating-hearts';
-            heart.textContent = ['💙', '💎', '⭐', '✨', '🌟'][Math.floor(Math.random() * 5)];
+            heart.textContent = ['💕', '💖', '⭐', '✨', '🌟'][Math.floor(Math.random() * 5)];
             heart.style.left = Math.random() * 100 + 'vw';
             heart.style.animationDelay = Math.random() * 2 + 's';
             document.body.appendChild(heart);
@@ -117,7 +115,7 @@ function createFloatingHearts() {
 }
 
 function createConfetti() {
-    const colors = ['#4facfe', '#00f2fe', '#1e40af', '#3b82f6', '#60a5fa'];
+    const colors = ['#ff6b9d', '#ff8fb3', '#db2777', '#ec4899', '#f472b6'];
 
     for (let i = 0; i < 30; i++) {
         const confetti = document.createElement('div');
