@@ -4,20 +4,20 @@ let currentSurpriseIndex = 0;
 let isPlaying = false;
 
 const surprises = [
-    "🌟 Kamu itu orang yang luar biasa banget",
-    "💫 Semua yang kamu capai hasil dari kerja keras dan ketekunanmu",
-    "🌈 Kehadiranmu bikin hidup orang lain jadi lebih berwarna",
-    "⭐ Kamu punya kekuatan buat wujudin semua mimpi-mimpimu",
-    "🦋 Setiap langkah kecilmu bikin masa depan jadi lebih cerah",
-    "🌻 Sikap positifmu selalu nyebarin semangat dan kebahagiaan",
-    "🎨 Hidupmu tuh kayak karya seni yang penuh cerita indah",
-    "💎 Kamu itu berharga banget buat keluarga dan teman-temanmu"
+  "🌟 Kamu itu bener-bener luar biasa, jangan pernah ragukan dirimu sendiri",
+  "💫 Semua yang udah kamu capai itu bukti kerja keras dan keteguhanmu, teruslah melangkah",
+  "🌈 Kehadiranmu bikin dunia sekitar jadi lebih indah dan penuh warna",
+  "⭐ Kamu punya kekuatan besar buat mewujudkan semua mimpi, percayalah sama dirimu",
+  "🦋 Setiap langkah kecilmu adalah awal dari masa depan yang semakin cerah",
+  "🌻 Sikap positifmu selalu jadi energi baik buat orang lain, terus tebarkan semangat itu",
+  "🎨 Hidupmu tuh ibarat karya seni penuh cerita indah yang terus berkembang",
+  "💎 Kamu itu berharga banget buat orang-orang disekitarmu, jangan lupa kalau kamu juga kuat dan pasti bisa melewati beban seberat apapun"
 ];
 
 const photoCaptions = [
     "Putri Duyung nyasar ini mah 🧜‍♀ ",
     "Good smile with jempol andalan 👍",
-    "Calon BA G2G kayaknya ini 😍",
+    "Calon2 BA G2G kayaknya ini 😍",
     "Orang masuk angin ini mah 🤧",
 ];
 

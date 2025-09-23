@@ -195,22 +195,26 @@ body {
     animation: pulse 2s infinite;
 }
 
-/* Page 4: Gallery */
+/* Page 4: Gallery - FIXED */
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin: 2rem 0;
+    gap: 15px;
+    margin: 1.5rem 0;
+    max-width: 350px; /* Batasi lebar gallery */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .photo-frame {
-    aspect-ratio: 1;
+    aspect-ratio: 1; /* Mempertahankan rasio 1:1 */
+    width: 100%;
     background: linear-gradient(45deg, #ff6b9d, #ff8fb3);
     border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
     animation: photoFloat 3s ease-in-out infinite;
@@ -218,7 +222,7 @@ body {
 }
 
 .photo-frame:hover {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.05) rotate(2deg); /* Hover effect lebih kecil */
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -235,6 +239,21 @@ body {
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
+}
+
+/* Photo caption dengan styling yang lebih menonjol */
+#photo-caption {
+    margin-top: 1rem !important;
+    color: #db2777 !important;
+    font-size: 1.1rem !important;
+    min-height: 60px !important;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 15px;
+    border: 2px solid rgba(255, 107, 157, 0.3);
+    backdrop-filter: blur(10px);
+    font-weight: 500;
+    line-height: 1.5;
 }
 
 /* Page 5: Games */
@@ -506,13 +525,24 @@ body {
         font-size: 1.8rem;
     }
 
+    /* Gallery responsive - FIXED */
     .gallery {
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        gap: 10px;
+        max-width: 280px; /* Batasi lebar untuk mobile */
+        margin: 1rem auto;
     }
 
     .photo-frame {
-        font-size: 2.5rem;
+        aspect-ratio: 1; /* Tetap 1:1 */
+        font-size: 2rem;
+    }
+
+    #photo-caption {
+        margin-top: 0.8rem !important;
+        font-size: 1rem !important;
+        min-height: 50px !important;
+        padding: 12px;
     }
 
     .surprise-box {
@@ -577,13 +607,24 @@ body {
         font-size: 0.9rem;
     }
 
+    /* Gallery extra small screen - FIXED */
     .gallery {
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        gap: 8px;
+        max-width: 240px; /* Batasi lebar untuk layar kecil */
+        margin: 0.8rem auto;
     }
 
     .photo-frame {
-        font-size: 2rem;
+        aspect-ratio: 1; /* Tetap 1:1 */
+        font-size: 1.8rem;
+    }
+
+    #photo-caption {
+        margin-top: 0.6rem !important;
+        font-size: 0.9rem !important;
+        min-height: 45px !important;
+        padding: 10px;
     }
 
     .surprise-box {
